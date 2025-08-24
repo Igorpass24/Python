@@ -1,0 +1,53 @@
+from collections import deque
+
+print("=== MENU ===")
+print("1 - Trabalhar com lista")
+print("2 - Trabalhar com pilha")
+print("3 - Trabalhar com fila")
+print("4 - Trabalhar com conjunto")
+print("5 - Trabalhar com dicionário")
+
+opcao = input("Escolha uma opção: ")
+
+if opcao == "1":
+    lista = []
+    lista.append("Python")
+    lista.append("Java")
+    lista.append("C")
+    print("Lista:", lista)
+    lista.remove("Java")
+    print("Depois de remover:", lista)
+
+elif opcao == "2":
+    pilha = []
+    pilha.append(1)
+    pilha.append(2)
+    pilha.append(3)
+    print("Pilha:", pilha)
+    print("Removido:", pilha.pop())
+    print("Depois do pop:", pilha)
+
+elif opcao == "3":
+    fila = deque()
+    fila.append("Ana")
+    fila.append("Carlos")
+    fila.append("João")
+    print("Fila:", fila)
+    print("Saiu:", fila.popleft())
+    print("Depois:", fila)
+
+elif opcao == "4":
+    conjunto = {1, 2, 2, 3}
+    print("Conjunto:", conjunto)
+    conjunto.add(4)
+    print("Depois do add:", conjunto)
+
+elif opcao == "5":
+    dicionario = {"nome": "Igor", "idade": 21}
+    print("Dicionário:", dicionario)
+    dicionario["curso"] = "Python"
+    for k, v in dicionario.items():
+        print(k, ":", v)
+
+else:
+    print("Opção inválida")
