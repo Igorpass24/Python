@@ -1,0 +1,48 @@
+print("=== LISTA ===")
+lista = [10, 20, 30]
+print("Lista inicial:", lista)
+lista.append(40)
+print("Depois do append:", lista)
+lista.remove(20)
+print("Depois do remove:", lista)
+print("Elemento no índice 1:", lista[1])
+
+print("\n=== PILHA ===")
+pilha = []
+pilha.append("A")
+pilha.append("B")
+pilha.append("C")
+print("Pilha atual:", pilha)
+topo = pilha.pop()
+print("Elemento removido:", topo)
+print("Pilha depois do pop:", pilha)
+
+print("\n=== FILA ===")
+from collections import deque
+fila = deque(["João", "Maria", "Ana"])
+print("Fila inicial:", fila)
+fila.append("Carlos")
+print("Depois de entrar Carlos:", fila)
+primeiro = fila.popleft()
+print("Saiu da fila:", primeiro)
+print("Fila atual:", fila)
+
+print("\n=== CONJUNTO ===")
+conjunto = {1, 2, 3, 3, 2, 1}
+print("Conjunto (sem duplicados):", conjunto)
+conjunto.add(4)
+print("Depois do add(4):", conjunto)
+print("Verifica se 2 está no conjunto:", 2 in conjunto)
+
+print("\n=== DICIONÁRIO ===")
+aluno = {
+    "nome": "Igor",
+    "idade": 21,
+    "curso": "Sistemas Digitais"
+}
+print("Dicionário:", aluno)
+print("Nome:", aluno["nome"])
+aluno["idade"] = 22
+print("Idade atualizada:", aluno["idade"])
+for chave, valor in aluno.items():
+    print(f"{chave}: {valor}")
